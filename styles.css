@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#fff 0 ,#fff 50%,#0969b8 50%, #0507a1 100%);
+    font-family: 'Courier New', Courier, monospace;
+}
+.bigBox{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #fff;
+padding: 20px;
+transition: 0.5s;
+border-radius: 5px;
+overflow: hidden;
+box-shadow: 0 9px 15px rgba(0,0,0,.4);
+}
+.list{
+margin: 0;
+padding: 0;
+width: 0;
+overflow: hidden;
+display: flex;
+transition: 0.5s;
+}
+.bigBox input:checked ~ .list{
+width: 350px;
+}
+.list li{
+list-style: none;
+margin: 0 15px;
+}
+.list li a{
+text-decoration: none;
+color: rgb(39, 37, 37);
+font-weight: 600px;
+transition: 0.5s;
+}
+.list li a:hover{
+color:rgb(3, 67, 87);
+}
+.bigBox input{
+width: 50px;
+height: 50px;
+cursor: pointer;
+}
+.bigBox span{
+position: absolute;
+left: 25px;
+width:35px;
+height: 5px;
+background: #565;
+pointer-events: none;
+transition: 0.5s;
+}
+.bigBox input:checked ~ span{
+background: red;
+}
+.bigBox span:nth-child(2){
+transform: translateY(-8px);
+}
+.bigBox input:checked ~ span span:nth-child(2){
+transform: translateY(0) rotate(45deg);
+}
+.bigBox span:nth-child(3){
+transform: translateY(8px);
+}
